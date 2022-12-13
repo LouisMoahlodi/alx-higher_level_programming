@@ -4,4 +4,4 @@ for num1 in range(0, 9):
         if num1 == 8:
             print("{:d}{:d}".format(num1, num2))
             break
-        print("{:d}{:d}".format(num1, num2), end=", ") 
+        print("{:d}{:d}".format(num1, num2), end=", ")
