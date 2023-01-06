@@ -13,8 +13,8 @@ class Square:
             TypeError: if size is not an int
             ValueError: if size is less than zero
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -62,12 +62,11 @@ class Square:
     def my_print(self):
 
         if self.__size == 0:
-            print()
+            print("")
             return
 
-        for i in range(self.__position[1]):
-            print()
-
-        for i in range(self.__size):
-            print(" " * self.__position[0], end="")
-            print('#' * self.__size)
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print('#', end="") for k in range(0, self.__size)]
+            print("")
