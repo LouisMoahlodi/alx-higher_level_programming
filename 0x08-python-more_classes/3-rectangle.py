@@ -68,10 +68,10 @@ class Rectangle:
 
         return 2 * (self.__width + self.__height)
 
-    def __str__(self) -> str:
+    def __str__(self):
         """Prints area of rectangle with the '#' character"""
         if self.__width == 0 or self.__width == 0:
-            return ()
+            return ""
         """rectangle = ""
         #for i in range(self.__height):
             #for j in range(self.width):
