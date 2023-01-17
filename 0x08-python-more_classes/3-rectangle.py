@@ -71,7 +71,7 @@ class Rectangle:
     def __str__(self) -> str:
         """Prints area of rectangle with the '#' character"""
         if self.__width == 0 or self.__width == 0:
-            print()
+            return()
         rectangle = ""
         for i in range(self.__height):
             for j in range(self.width):
