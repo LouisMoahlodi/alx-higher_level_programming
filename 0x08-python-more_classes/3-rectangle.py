@@ -71,11 +71,14 @@ class Rectangle:
     def __str__(self) -> str:
         """Prints area of rectangle with the '#' character"""
         if self.__width == 0 or self.__width == 0:
-            return()
-        rectangle = ""
-        for i in range(self.__height):
-            for j in range(self.width):
-                rectangle += "#"
-            if i < self.__height - 1:
-                rectangle += "\n"
-        return (rectangle)
+            return ()
+        """rectangle = ""
+        #for i in range(self.__height):
+            #for j in range(self.width):
+                #rectangle += "#"
+            #if i < self.__height - 1:
+                #rectangle += "\n"
+        #return (rectangle)"""
+
+        return ("\n".join(["".join(["#" for i in range(self.__width)])
+                for j in range(self.__height)]))
