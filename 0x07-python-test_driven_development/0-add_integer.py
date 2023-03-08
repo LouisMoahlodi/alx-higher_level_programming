@@ -1,7 +1,7 @@
 #!/usr/bin/pyhton3
 """
 
-his module is composed of a function called 'add_integer' that takes two arguments, 'a' and 'b', and returns their sum.
+This module is composed of a function called 'add_integer' that takes two arguments, 'a' and 'b', and returns their sum.
 """
 
 def add_integer(a, b=98):
