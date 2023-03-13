@@ -1,23 +1,20 @@
 #!/usr/bin/pyhton3
 """
 
-This module is composed by a function that adds two numbers
-
+This module is composed of a function called 'add_integer' that takes two arguments, 'a' and 'b', and returns their sum.
 """
 
 def add_integer(a, b=98):
-    """ a function that adds 2 integers 
-    
+    """
     Args:
-        a: first argument
-        b: second argument
+      a (int or float): First argument to be added.
+      b (int or float, optional): Second argument to be added. Defaults to 98.
 
     Returns:
-            Sum of the two arguments
+     int: The sum of 'a' and 'b' as an integer.
 
     Raises:
-            TypeError: If either of the arguments not an integer or a float
-
+        TypeError: If either of the arguments is not an integer or a float.
     """
     if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
