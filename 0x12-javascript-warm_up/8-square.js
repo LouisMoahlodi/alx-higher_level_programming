@@ -5,10 +5,11 @@ const x = parseInt(args[0]);
 if (isNaN(x)) {
   console.log('Missing size');
 } else {
-  let i = 0;
-  const str = 'x'.repeat(x);
-  while (i < x) {
+  let str = '';
+  for (let i = 0; i < x; i++) {
+    str += 'x';
+  }
+  for (let i = 0; i < x; i++) {
     console.log(str);
-    i++;
   }
 }
