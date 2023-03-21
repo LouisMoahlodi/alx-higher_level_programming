@@ -1,15 +1,9 @@
 #!/usr/bin/node
-function findSecondBiggest (args) {
-  if (args.length < 2) {
-    return 0;
-  }
-
-  const integers = args.map(arg => parseInt(arg));
-  const sortedIntegers = integers.sort((a, b) => b - a);
-  const secondBiggest = sortedIntegers[1];
-  console.log(`${secondBiggest}`);
+if (process.argv.length <= 3) {
+  console.log(0);
+} else {
+  const args = process.argv.map(Number)
+    .slice(1, process.argv.length)
+    .sort((a, b) => a - b);
+  console.log(args[args.length - 2]);
 }
-
-const args = process.argv.slice(2);
-
-findSecondBiggest(args);
