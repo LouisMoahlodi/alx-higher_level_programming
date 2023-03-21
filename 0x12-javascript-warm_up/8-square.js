@@ -7,7 +7,7 @@ if (isNaN(x)) {
 } else {
   let str = '';
   for (let i = 0; i < x; i++) {
-    str += 'x';
+    str += 'X';
   }
   for (let i = 0; i < x; i++) {
     console.log(str);
