@@ -1,9 +1,9 @@
 #!/usr/bin/node
-function sumArray(arr) {
-let sum = 0;
-for (let i = 0; i < arr.length; i++) {
-sum += arr[i];
-}
-return sum;
-}
-
+/* window.add = function add (a, b) {
+  return a + b;
+}; */
+// window is used for testing and debugging in the browser console
+// But not for larg and complex codebase
+exports.add = function (a, b) {
+  return a + b;
+};
