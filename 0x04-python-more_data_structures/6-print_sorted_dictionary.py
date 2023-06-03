@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    sorted_dict = dict(sorted(a_dictionary.items(), key=lambda x: x[0]))
+    sorted_dict = {}
+    sorted_keys = sorted(a_dictionary.key())
+
+    for key in sorted_keys:
+        sorted_dict[key] = a_dictionary[key]
 
     return sorted_dict 
