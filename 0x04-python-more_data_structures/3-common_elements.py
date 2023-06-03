@@ -8,5 +8,5 @@ def common_elements(set_1, set_2):
         if element in set_2:
             # Add the common element to the common_set
             common_set.add(element)
-            
+
     return common_set
