@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 def only_diff_elements(set_1, set_2):
     # Create an empty set to store the unique element
     unique_set = set()
