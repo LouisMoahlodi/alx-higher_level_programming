@@ -1,7 +1,7 @@
 def search_replace(my_list, search, replace):
     new_list = []
 
-    #Iterate over the elements in the original list
+    # Iterate over the elements in the original list
     for element in my_list:
         # Check if the element matched the search value
         if element == search:
