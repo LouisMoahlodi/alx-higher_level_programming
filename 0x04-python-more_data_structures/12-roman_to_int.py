@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
     }
 
     # Create a list of integer values by mapping the lambda function to each character of the Roman numeral string
-    values = list(map(lambda char: roman_numeral.get(char, 0), roman_string))
+    values = list(map(lambda char: roman_numerals.get(char, 0), roman_string))
 
     # Initialize variables to store the result and previous value
     result = 0
