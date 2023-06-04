@@ -2,8 +2,9 @@ def roman_to_int(roman_string):
     # Check if the input is not a string or if it is None
     if not isinstance(roman_string, str) or roman_string in None:
         return 0
-    
-    # Define a dictionary to map Roman nemerls to their corresponding integers values
+
+    # Define a dictionary to map Roman nemerls to their corresponding integers
+    # values
     roman_numerals = {
         'I': 1,
         'V': 5,
@@ -14,7 +15,8 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    # Create a list of integer values by mapping the lambda function to each character of the Roman numeral string
+    # Create a list of integer values by mapping the lambda function to each
+    # character of the Roman numeral string
     values = list(map(lambda char: roman_numeral.get(char, 0), roman_string))
 
     # Initialize variables to store the result and previous value
@@ -25,10 +27,12 @@ def roman_to_int(roman_string):
     for value in values[::-1]:
         # Compare the current value with the previous value
         if value >= previous_value:
-            # If the current value is greater than or equal to the previous value, add it to the result
+            # If the current value is greater than or equal to the previous
+            # value, add it to the result
             result += value
         else:
-            # IF the current value is smaller than the previous value, subtact it from the result
+            # IF the current value is smaller than the previous value, subtact
+            # it from the result
             result -= value
 
         # Update the previous value for the next iteration
