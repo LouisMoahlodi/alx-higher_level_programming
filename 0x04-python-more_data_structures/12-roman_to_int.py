@@ -1,6 +1,6 @@
 def roman_to_int(roman_string):
     # Check if the input is not a string or if it is None
-    if not isinstance(roman_string, str) or roman_string in None:
+    if not isinstance(roman_string, str) or roman_string is None:
         return 0
     
     # Define a dictionary to map Roman nemerls to their corresponding integers values
