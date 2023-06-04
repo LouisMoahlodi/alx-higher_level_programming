@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def roman_to_int(roman_string):
     # Check if the input is not a string or if it is None
     if not isinstance(roman_string, str) or roman_string is None:
@@ -15,9 +16,8 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    # Create a list of integer values by mapping the lambda function to each
-    # character of the Roman numeral string
-    values = list(map(lambda char: roman_numeral.get(char, 0), roman_string))
+    # Create a list of integer values by mapping the lambda function to each character of the Roman numeral string
+    values = list(map(lambda char: roman_numerals.get(char, 0), roman_string))
 
     # Initialize variables to store the result and previous value
     result = 0
