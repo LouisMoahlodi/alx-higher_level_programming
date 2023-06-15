@@ -14,7 +14,7 @@ def safe_print_list_integers(my_list=[], x=0):
                 print("{:d}".format(value), end="")
                 # Increment counter to track number of integers printed.
                 ktrack += 1
-    except (IndexError, TypeError, IndexError):
+    except (IndexError, TypeError, ValueError):
         # Ignore excepetions (index out of range or non-integer element)
         pass
 
