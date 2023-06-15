@@ -11,7 +11,7 @@ def safe_print_list_integers(my_list=[], x=0):
             # Check if the element is an integer
             if isinstance(value, int):
                 # Print the integer without a new line
-                print("{:d}".formart(value), end="")
+                print("{:d}".format(value), end="")
                 # Increment counter to track number of integers printed.
                 ktrack +=1
     except (IndexError, TypeError):
