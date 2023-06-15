@@ -5,7 +5,7 @@ def safe_print_list_integers(my_list=[], x=0):
     try:
         # Iterate over the range specified by x
         for i in range(x):
-            #Access the current element from my_list
+            # Access the current element from my_list
             value = my_list[i]
 
             # Check if the element is an integer
@@ -13,7 +13,7 @@ def safe_print_list_integers(my_list=[], x=0):
                 # Print the integer without a new line
                 print("{:d}".format(value), end="")
                 # Increment counter to track number of integers printed.
-                ktrack +=1
+                ktrack += 1
     except (IndexError, TypeError):
         # Ignore excepetions (index out of range or non-integer element)
         pass
