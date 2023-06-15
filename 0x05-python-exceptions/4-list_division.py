@@ -1,6 +1,6 @@
-#!/usr/bin/pyhton3 
+#!/usr/bin/pyhton3
 def list_division(my_list_1, my_list_2, list_length):
-    #Empty list to store the division results
+    # Empty list to store the division results
     results = []
 
     try:
@@ -13,7 +13,9 @@ def list_division(my_list_1, my_list_2, list_length):
                 value_2 = my_list_2[i]
 
                 # Check if both values are int or float
-                if isinstance(value_1, (int, float)) and isinstance(value_2, (int, float)):
+                if isinstance(
+                        value_1, (int, float)) and isinstance(
+                        value_2, (int, float)):
                     try:
                         div_result = value_1 / value_2
                         # Append the division result to the list
