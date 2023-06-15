@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def safe_print_intger(value):
+def safe_print_integer(value):
         try: 
             # Prints the value as an int using the "{:d}.format()"
             print("{:d}".format(value))
