@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     # Variable to keep track of the number of succesfully printed elements
-    ktrack = 0  
+    ktrack = 0
 
     for i in range(x):  # Loop through the specified range
         try:
