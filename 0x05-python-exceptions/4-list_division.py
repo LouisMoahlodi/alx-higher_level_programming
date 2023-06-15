@@ -34,6 +34,6 @@ def list_division(my_list_1, my_list_2, list_length):
     except TypeError:
         # Ignore TyperError exceptions
         pass
-
-    # Return the resulting list of divisions
-    return results
+    finally:
+        # Return the resulting list of divisions
+        return results
