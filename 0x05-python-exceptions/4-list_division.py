@@ -4,11 +4,11 @@ def list_division(my_list_1, my_list_2, list_length):
     results = []
     # Iterate over the range specified by list_length
     for i in range(list_length):
+         # Access the current element from my_list_1
+        value_1 = my_list_1[i]
+        # Access the current element from my_list_2
+        value_2 = my_list_2[i]
         try:
-            # Access the current element from my_list_1
-            value_1 = my_list_1[i]
-            # Access the current element from my_list_2
-            value_2 = my_list_2[i]
             div_result = value_1 / value_2
 
         except TypeError:
