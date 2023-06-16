@@ -5,7 +5,11 @@ def list_division(my_list_1, my_list_2, list_length):
     # Iterate over the range specified by list_length
     for i in range(0, list_length):
         try:
-            div_result = my_list_1[i] / my_list_2[i]
+            #Access the current element from my_list_1
+            value_1 = my_list_1[i]
+            #Access the current element from my_list_2
+            value_2 = my_list_2
+            div_result = value_1 / value_2
 
         except TypeError:
             print("wrong type")
@@ -13,7 +17,7 @@ def list_division(my_list_1, my_list_2, list_length):
 
         except ZeroDivisionError:
             # Print message if division by zero occurs
-            print("division by zero")
+            print("division by 0")
 
         except IndexError:
             print("out of range")
