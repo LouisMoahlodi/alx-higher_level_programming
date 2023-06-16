@@ -2,38 +2,29 @@
 def list_division(my_list_1, my_list_2, list_length):
     # Empty list to store the division results
     results = []
+    # Iterate over the range specified by list_length
+    for i in range(list_length):
+        try:
+            # Access the current element from my_list_1
+            value_1 = my_list_1[i]
+            # Access the current element from my_list_2
+            value_2 = my_list_2[i]
+            div_result = value_1 / value_2
+        
+        except TypeError:
+            print("wrong type")
+            div_result = 0
 
-    try:
-        # Iterate over the range specified by list_length
-        for i in range(list_length):
-            try:
-                # Access the current element from my_list_1
-                value_1 = my_list_1[i]
-                # Access the current element from my_list_2
-                value_2 = my_list_2[i]
+        except ZeroDivisionError:
+            # Print message if division by zero occurs
+            print("division by zero")
 
-                # Check if both values are int or float
-                if isinstance(
-                        value_1, (int, float)) and isinstance(
-                        value_2, (int, float)):
-                    try:
-                        div_result = value_1 / value_2
-                        # Append the division result to the list
-                        results.append(div_result)
-                    except ZeroDivisionError:
-                        # Print message if division by zero occurs
-                        print("division by zero")
-                        # Append 0 to the result list
-                        results.append(0)
-                    else:
-                        print("wrong type")
-                        results.append(0)
-            except IndexError:
-                print("out of range")
-                results.append(0)
-    except TypeError:
-        # Ignore TyperError exceptions
-        pass
-    finally:
-        # Return the resulting list of divisions
-        return results
+        except IndexError:
+            print("out of range")
+            div_result = 0
+            
+        finally:
+            # Append each result into a new list
+            results.append(div_result)
+    # Return the resulting list of divisions
+    return results
