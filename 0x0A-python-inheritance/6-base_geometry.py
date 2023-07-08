@@ -5,6 +5,4 @@
 class BaseGeometry:
     
     def area(self):
-        raise ValueError
-        print("area() is not implemented")
-        
+        raise Exception("area() is not implemented")
