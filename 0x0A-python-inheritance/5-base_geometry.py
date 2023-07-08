@@ -2,5 +2,6 @@
 """ Empty class"""
 
 
-class BaseGeomery:
+class BaseGeometry:
+    """Does nothing"""
     pass
