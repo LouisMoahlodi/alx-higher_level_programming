@@ -48,3 +48,11 @@ case 4: negative value
 ... except Exception as e:
 ...     print(str(e))
 >>>
+
+----------------------------
+
+case 5: Instantiation 
+
+>>> bg = BaseGeometry()
+>>> print(bg)
+>>>
