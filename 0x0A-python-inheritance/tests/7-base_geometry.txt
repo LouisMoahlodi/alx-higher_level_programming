@@ -1,0 +1,50 @@
+Test for 7-base_geometry.py
+----------------------------
+
+case 0: import
+>>> BaseGeometry = __import__('0-base_geometry').BaseGeometry
+>>>
+
+----------------------------
+
+case 1: common case
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print(str(e))
+>>>
+
+----------------------------
+
+case 2: valid integer
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("height", 5)
+... except Exception as e:
+...     print(str(e))
+>>>
+
+----------------------------
+
+case 3: non-integer value
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("height", "abc")
+... except Exception as e:
+...     print(str(e))
+>>>
+
+----------------------------
+
+case 4: negative value
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("height", -5)
+... except Exception as e:
+...     print(str(e))
+>>>
