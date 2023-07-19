@@ -2,12 +2,12 @@ Test for 7-base_geometry.py
 ----------------------------
 
 case 0: import
->>> BaseGeometry = __import__('0-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>>
 
 ----------------------------
 
-case 1: common case
+case 0.01: common case
 
 >>> bg = BaseGeometry()
 >>> try:
@@ -16,42 +16,118 @@ case 1: common case
 ...     print(str(e))
 >>>
 
-----------------------------
-
-case 2: valid integer
-
+case 1: area()
 >>> bg = BaseGeometry()
 >>> try:
-...     bg.integer_validator("height", 5)
+...     bg.area()
 ... except Exception as e:
 ...     print(str(e))
->>>
+ Traceback (most recent call last):
+    	      ...
+Exception: area() is not implemented
 
-----------------------------
+-------------------------------------------
 
-case 3: non-integer value
-
+case 2: integer_validator()
 >>> bg = BaseGeometry()
 >>> try:
-...     bg.integer_validator("height", "abc")
+...     bg.integer_validator("name", 5)
 ... except Exception as e:
 ...     print(str(e))
->>>
 
-----------------------------
+-------------------------------------------
 
-case 4: negative value
-
+case 3: integer_validator("age")
 >>> bg = BaseGeometry()
 >>> try:
-...     bg.integer_validator("height", -5)
+...     bg.integer_validator("age")
 ... except Exception as e:
 ...     print(str(e))
->>>
 
-----------------------------
+-------------------------------------------
 
-case 5: Instantiation 
+case 4: integer_validator("age", 1)
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", 1)
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 5: integer_validator("age", 0)
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 6: integer_validator("age", -4)
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", -4)
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 7: integer_validator("age", "4")
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", "4")
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 8: integer_validator("age", (4,))
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 9: integer_validator("age", [3])
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", [3])
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 10: integer_validator("age", True)
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", True)
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 11: integer_validator("age", {3, 4})
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", {3, 4})
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 12: integer_validator("age", None)
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", None)
+... except Exception as e:
+...     print(str(e))
+
+-------------------------------------------
+
+case 13: Instantiation 
 
 >>> bg = BaseGeometry()
 >>> print(bg)
