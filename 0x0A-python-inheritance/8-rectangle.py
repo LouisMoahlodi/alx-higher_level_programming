@@ -28,14 +28,14 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    def __init__(self, width, height):
-        """
+     """
         Initializes a Rectangle instance
 
         Args:
             width (int): The width of the rectangle
             height (int): The height of the rectangle
         """
+     def __init__(self, width, height):
         super().__init__()
         self.width = width
         self.height = height
