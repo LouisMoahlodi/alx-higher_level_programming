@@ -25,4 +25,3 @@ class Square(Rectangle):
         Returns string representation for Sqaure
         """
         return f"[Square] {self._Rectangle__width}/{self._Rectangle__height}"
-    
