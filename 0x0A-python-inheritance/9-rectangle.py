@@ -24,9 +24,8 @@ class Rectangle(BaseGeometry):
         Method to calculate the are of the rectangle.
         """
         return self.__width * self.__height
-    
+
     def __str__(self):
         """ Returns string representation for Rectangle.
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
-    
