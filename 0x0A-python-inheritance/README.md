@@ -1,247 +1,95 @@
-# Python - Everything is object
+# Python - Inheritance
 
-In this project, I studied object instantiation in Python, delving into
-variable aliasing and object identifiers, types, and mutability. The project
-involved a series of quiz-like questions the answers to which I provided in
-single-line `.txt` files.
+In this project, I learned about Python class inheritance. I learned about the
+differences between super- and sub-classes while practicing inheritance,
+definining classes with multiple base classes, and overiding inherited methods
+and attributes.
 
 ## Tests :heavy_check_mark:
 
-* [tests](./tests): Folder of test files. Provided by ALX.
+* [tests](./tests): Folder of test files provided by ALX, as well as the following two independently-developed:
+    * [1-my_list.txt](./1-my_list.txt)
+    * [7-base_geometry.txt](./7-base_geometry.txt)
+
+## Function Prototypes :floppy_disk:
+
+Prototypes for functions written in this project:
+
+| File                    | Prototype                             |
+| ----------------------- | ------------------------------------- |
+| `0-lookup.py`           | `def lookup(obj):`                    |
+| `2-is_same_class.py`    | `def is_same_class(obj, a_class):`    |
+| `3-is_kind_of_class.py` | `def is_kind_of_class(obj, a_class):` |
+| `4-inherits_from.py`    | `def inherits_from(obj, a_class):`    |
+| `101-add_attribute.py`  | `def add_attribute(obj, att, value):` |
 
 ## Tasks :page_with_curl:
 
-* **0. Who am I?**
-  * [0-answer.txt](./0-answer.txt): What function would you use to print the type of an object?
+* **0. Lookup**
+  * [0-lookup.py](./0-lookup.py): Python function that returns a list of available attributes
+  and methods of an objects.
 
+* **1. My list**
+  * [1-my_list.py](./1-my_list.py): Python class `MyList` that inherits from `list`. Includes:
+    * Public instance method `def print_sorted(self):` that prints the list in
+    ascending sorted order (assumes all list elements are `int`s).
 
-* **1. Where are you?**
-  * [1-answer.txt](./1-answer.txt): How do you get a variable's identifier
-(which is the memory address in the CPython implementation)?
+* **2. Exact same object**
+  * [2-is_same_class.py](./2-is_same_class.py): Python function that returns `True` if an object is
+  exactly an instance of a specified class; otherwise `False`.
 
-* **2. Right count**
-  * [2-answer.txt](./2-answer.txt): In the following code, do `a` and `b` point to the same object?
-```
->>> a = 89
->>> b = 100
-```
+* **3. Same class or inherit from**
+  * [3-is_kind_of_class.py](./3-is_kind_of_class.py): Python function that returns `True` if an object is
+  an instance or inherited instance of a specified class; otherwise `False`.
 
-* **3. Right count =**
-  * [3-answer.txt](./3-answer.txt): In the following code, do `a` and `b` point to the same object?
-```
->>> a = 89
->>> b = 89
-```
+* **4. Only sub class of**
+  * [4-inherits_from.py](./4-inherits_from.py): Python function that returns `True` if an object is
+  an inherited instance (either directly or indirectly) from a specified class;
+  otherwise `False`.
 
-* **4. Right count =**
-  * [4-answer.txt](./4-answer.txt): In the following code, do `a` and `b` point to the same object?
-```
->>> a = 89
->>> b = a
-```
+* **5. Geometry module**
+  * [5-base_geometry.py](./5-base_geometry.py): An empty Python class `BaseGeometry`.
 
-* **5. Right count =+**
-  * [5-answer.txt](./5-answer.txt): In the following code, do `a` and `b` point to the same object?
-```
->>> a = 89
->>> b = a + 1
-```
+* **6. Improve Geometry**
+  * [6-base_geometry.py](./6-base_geometry.py): Python class `BaseGeometry`. Builds on
+  [5-base_geometry.py](./5-base_geometry.py) with:
+    * Public instance method `def area(self):` that raises an `Exception` with
+    the message `area() is not implemented`.
 
-* **6. Is equal**
-  * [6-answer.txt](./6-answer.txt): What do these 3 lines print?
-```
->>> s1 = "Holberton"
->>> s2 = s1
->>> print(s1 == s2)
-```
+* **7. Integer validator**
+  * [7-base_geometry.py](./7-base_geometry.py): Python class `BaseGeometry`. Builds on
+  [6-base_geometry.py](./6-base_geometry.py) with:
+    * Public instance method `def integer_validator(self, name, value):` that
+    validates the parameter `value`.
+    * Assumes the parameter `name` is always a string.
+    * The parameter `value` must be an `int`, otherwise, a `TypeError` exception
+    is raised with the message `<name> must be an integer`.
+    * The parameter `value` must be greater than `0`, otherwise, a
+    `ValueError` exception is raised with the message `<value> must be greater
+    than 0`.
 
-* **7. Is the same**
-  * [7-answer.txt](./7-answer.txt): What do these 3 lines print?
-```
->>> s1 = "Holberton"
->>> s2 = s1
->>> print(s1 is s2)
-```
+* **8. Rectangle**
+  * [8-rectangle.py](./8-rectangle.py): Python class `Rectangle` that inherits from `BaseGeometry`
+  ([7-base_geometry.py](./7-base_geometry.py)). Includes:
+    * Private attributes `width` and `height` - validated with `integer_validator`.
+    * Instantiation with `width` and `height`: `def __init__(self, width, height):`
 
-* **8. Is really equal**
-  * [8-answer.txt](./1-answer.txt): What do these 3 lines print?
-```
->>> s1 = "Holberton"
->>> s2 = "Holberton"
->>> print(s1 == s2)
-```
+* **9. Full rectangle**
+  * [9-rectangle.py](./9-rectangle.py): Python class `Rectangle` that inherits from `BaseGeometry`
+  ([7-base_geometry.py](./7-base_geometry.py)). Builds on [8-rectangle.py](./8-rectangle.py) with:
+    * Implementation of the method `area()`.
+    * Special method `__str__` to print `Rectangle`s in the format `[Rectangle]
+    <width>/<height>`.
 
-* **9. Is really the same**
-  * [9-answer.txt](./9-answer.txt): What do these 3 lines print?
-```
->>> s1 = "Holberton"
->>> s2 = "Holberton"
->>> print(s1 is s2)
-```
+* **10. Square #1**
+  * [10-square.py](./10-square.py): Python class `Square` that inherits from `Rectangle`
+  ([9-rectangle.py](./9-rectangle.py)). Includes:
+    * Private attribute `size` - validated with `integer_validator`.
+    * Instantiation with `size`: `def __init__(self, size):`.
+    * Implementation of the `area()` method.
 
-* **10. And with a list, is it equal**
-  * [10-answer.txt](./10-answer.txt): What do these 3 lines print?
-```
->>> l1 = [1, 2, 3]
->>> l2 = [1, 2, 3]
->>> print(l1 == l2)
-```
-
-* **11. And with a list, is it the same**
-  * [11-answer.txt](./11-answer.txt): What do these 3 lines print?
-```
->>> l1 = [1, 2, 3]
->>> l2 = [1, 2, 3]
->>> print(l1 is l2)
-```
-
-* **12. And with a list, is it really equal**
-  * [12-answer.txt](./12-answer.txt): What do these 3 lines print?
-```
->>> l1 = [1, 2, 3]
->>> l2 = l1
->>> print(l1 == l2)
-```
-
-* **13. And with a list, is it really the same**
-  * [13-answer.txt](./13-answer.txt): What do these 3 lines print?
-```
->>> l1 = [1, 2, 3]
->>> l2 = l1
->>> print(l1 is l2)
-```
-
-* **14. List append**
-  * [14-answer.txt](./14-answer.txt): What does this script print?
-```
-l1 = [1, 2, 3]
-l2 = l1
-l1.append(4)
-print(l2)
-```
-
-* **15. List add**
-  * [15-answer.txt](./15-answer.txt): What does this script print?
-```
-l1 = [1, 2, 3]
-l2 = l1
-l1 = l1 + [4]
-print(l2)
-```
-
-* **16. Integer incrementation**
-  * [16-answer.txt](./16-answer.txt): What does this script print?
-```
-def increment(n):
-    n += 1
-
-a = 1
-increment(a)
-print(a)
-```
-
-* **17. List incrementation**
-  * [17-answer.txt](./17-answer.txt): What does this script print?
-```
-def increment(n):
-    n.append(4)
-
-l = [1, 2, 3]
-increment(l)
-print(l)
-```
-
-* **18. List assignation**
-  * [18-answer.txt](./18-answer.txt): What does this script print?
-```
-def assign_value(n, v):
-    n = v
-
-l1 = [1, 2, 3]
-l2 = [4, 5, 6]
-assign_value(l1, l2)
-print(l1)
-```
-
-* **19. Copy a list object**
-  * [19-copy_list.py](./19-copy_list.py): Python function `def copy_list(l):` that returns
-a copy of a list.
-
-* **20. Tuple or not?**
-  * [20-answer.txt](./20-answer.txt): Is `a` a tuple?
-```
-a = ()
-```
-
-* **21. Tuple or not?**
- * [21-answer.txt](./21-answer.txt): Is `a` a tuple?
-```
-a = (1, 2)
-```
-
-* **22. Tuple or not?**
-  * [22-answer.txt](./22-answer.txt): Is `a` a tuple?
-```
-a = (1)
-```
-
-* **23. Tuple or not?**
-  * [23-answer.txt](./23-answer.txt): Is `a` a tuple?
-```
-a = (1, )
-```
-
-* **24. Richard Sim's special #0**
-  * [24-answer.txt](./24-answer.txt): What does this script print?
-```
-a = (1)
-b = (1)
-a is b
-```
-
-* **25. Richard Sim's special #1**
-  * [25-answer.txt](./25-answer.txt): What does this script print?
-```
-a = (1, 2)
-b = (1, 2)
-a is b
-```
-
-* **26. Richard Sim's special #2**
-  * [26-answer.txt](./26-answer.txt): What does this script print?
-```
-a = ()
-b = ()
-a is b
-```
-
-* **27. Richard Sim's special #3**
-  * [27-answer.txt](./27-answer.txt): Will the last line of this script print `139926795932424`?
-```
->>> id(a)
-139926795932424
->>> a
-[1, 2, 3, 4]
->>> a = a + [5]
->>> id(a)
-```
-
-* **28. Richard Sim's special #4**
-  * [28-answer.txt](./28-answer.txt): Will the last line of this script print `139926795932424`?
-```
->>> a
-[1, 2, 3]
->>> id (a)
-139926795932424
->>> a += [4]
->>> id(a)
-```
-
-* **29. #pythonic**
-  * [100-magic_string.py](./100-magic_string.py): Python function `magic_string()` that returns the
-string `"BestSchool"` n times the number of iteration.
-
-* **30. Low memory cost**
-  * [101-locked_class.py](./101-locked_class.py): Python class `LockedClass` with no attributes that
-prevents the user from dynamically creating any new instance attributes not
-called `first_name`.
+* **11. Square #2**
+  * [11-square.py](./11-square.py): Python class `Square` that inherits from `Rectangle`
+  ([9-rectangle.py](./9-rectangle.py)). Builds on [10-square.py](./10-square.py) with:
+    * Special method `__str__` to print squares in the format `[Square]
+    <width>/<height>`.
