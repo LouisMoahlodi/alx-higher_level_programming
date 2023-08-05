@@ -18,8 +18,9 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 # The first block of code is the correct implementation for the task because it
-# directly checks if the type of value is exactly int, whereas the second block of code
-# checks if value is an instance of the int class.
+# directly checks if the type of value is exactly int, 
+# whereas the second block of code checks if value is an instance of the 
+# int class.
 
 # class BaseGeometry:
 #     """ A function for geometry """
