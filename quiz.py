@@ -1,7 +1,13 @@
-def assign_value(n, v):
-    n = v
+class User:
+    id = 89
+    name = "no name"
+    __password = None
 
-l1 = [1, 2, 3]
-l2 = [4, 5, 6]
-assign_value(l1, l2)
-print(l1)
+    def __init__(self, new_name=None):
+        self.is_new = True
+        if new_name is not None:
+            self.name = new_name
+
+
+u = User()
+print (u.name)
