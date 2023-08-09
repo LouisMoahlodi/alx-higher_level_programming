@@ -23,11 +23,11 @@ class Square(Rectangle):
 
         Args:
             size (int): The size of the square's sides.
-            x (int, optional): 
+            x (int, optional):
                 The x-coordinate of the square's position. Defaults to 0.
-            y (int, optional): 
+            y (int, optional):
                 The y-coordinate of the square's position. Defaults to 0.
-            id (int, optional): 
+            id (int, optional):
                 The unique identifier of the square. Defaults to None.
         """
         self.size = size
