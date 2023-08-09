@@ -144,4 +144,8 @@ class Rectangle(Base):
         """
         Return string representation for Square
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (
+    f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+    f"{self.__width}/{self.__height}"
+)
+    
