@@ -155,7 +155,7 @@ class Rectangle(Base):
     
     def update(self, *args, **kwargs):
         """Updates the attributes of this object.
-        
+
         Args:
         *args: Positional arguments is the order id, width, height, x, y
         """
