@@ -134,6 +134,7 @@ class Rectangle(Base):
         return (self.__width * self.__height)
     
     def display(self):
+        """ Prints a rectangle character (#) with width & height"""
         for i in range (self.__height):
             for j in range (self.__width):
                 print("#", end="")
