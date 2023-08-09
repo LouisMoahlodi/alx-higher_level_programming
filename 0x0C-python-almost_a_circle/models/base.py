@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Base class created """
+
+
 class Base:
     """ A base class for all other classes"""
     __nb_objects = 0
@@ -8,6 +10,6 @@ class Base:
         """ Initializes the base instance"""
         if id is not None:
             self.id = id
-        else: 
+        else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
