@@ -152,7 +152,7 @@ class Rectangle(Base):
             f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
             f"{self.__width}/{self.__height}"
         )
-    
+
     def update(self, *args, **kwargs):
         """Updates the attributes of this object.
 
