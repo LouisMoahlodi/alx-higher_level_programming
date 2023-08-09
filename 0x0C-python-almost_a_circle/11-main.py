@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ 11-main """
 from models.square import Square
 
