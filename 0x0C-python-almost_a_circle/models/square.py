@@ -63,11 +63,10 @@ class Square(Rectangle):
         
         Args:
         Positional arguments. 
-            If provided, the arguments are assigned to attributes in order.
-            The first argument is assigned to 'id', the second to 'size', the third to 'x', and the fourth to 'y'.
-        
+            The arguments are assigned to attributes in order.
+            
         **kwargs: Keyword arguments. 
-            If provided, the key-value pairs are used to update instance attributes.
+            The key-value pairs are used to update instance attributes.
         """
 
         if len(args) > 0:
