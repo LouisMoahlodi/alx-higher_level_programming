@@ -62,10 +62,10 @@ class Square(Rectangle):
         """ Update the attributes of the Square instance
 
         Args:
-        Positional arguments. 
+        Positional arguments.
             The arguments are assigned to attributes in order.
-            
-        **kwargs: Keyword arguments. 
+
+        **kwargs: Keyword arguments.
             The key-value pairs are used to update instance attributes.
         """
 
