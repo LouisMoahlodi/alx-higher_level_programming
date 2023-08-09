@@ -57,7 +57,7 @@ class Square(Rectangle):
             str: A string in the format "[Square] (id) x/y - size"
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
-    
+
     def update(self, *args, **kwargs):
 
         if len(args) > 0:
@@ -68,7 +68,7 @@ class Square(Rectangle):
             self.x = args[2]
         if len(args) > 3:
             self.y = args[3]
-        
+
         if args:
             attributes = ["id", "size", "x", "y"]
             for attr, value in zip(attributes, args):
