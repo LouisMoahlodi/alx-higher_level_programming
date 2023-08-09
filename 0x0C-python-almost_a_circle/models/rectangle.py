@@ -139,7 +139,7 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print("")
-    
+
     def __str__(self):
         """
         Return string representation for Square
