@@ -59,6 +59,16 @@ class Square(Rectangle):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     def update(self, *args, **kwargs):
+        """ Update the attributes of the Square instance
+        
+        Args:
+        Positional arguments. 
+            If provided, the arguments are assigned to attributes in order.
+            The first argument is assigned to 'id', the second to 'size', the third to 'x', and the fourth to 'y'.
+        
+        **kwargs: Keyword arguments. 
+            If provided, the key-value pairs are used to update instance attributes.
+        """
 
         if len(args) > 0:
             self.id = args[0]
@@ -74,5 +84,5 @@ class Square(Rectangle):
             for attr, value in zip(attributes, args):
                 setattr(self, attr, value)
         else:
-            for ke, value in kwargs.items():
+            for key, value in kwargs.items():
                 setattr(self, key, value)
