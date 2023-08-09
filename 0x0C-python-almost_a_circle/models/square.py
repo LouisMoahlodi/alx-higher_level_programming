@@ -60,7 +60,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ Update the attributes of the Square instance
-        
+
         Args:
         Positional arguments. 
             The arguments are assigned to attributes in order.
