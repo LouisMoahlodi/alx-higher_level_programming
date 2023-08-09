@@ -7,6 +7,7 @@ Module providing a Rectangle class that inherits from the Base class.
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     A class to represent a rectangle.
@@ -29,7 +30,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """
@@ -39,7 +40,7 @@ class Rectangle(Base):
             int: The width of the rectangle.
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -59,7 +60,7 @@ class Rectangle(Base):
             int: The height of the rectangle.
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -69,7 +70,7 @@ class Rectangle(Base):
             value (int): The height of the rectangle.
         """
         self.__height = value
-    
+
     @property
     def x(self):
         """
@@ -79,7 +80,7 @@ class Rectangle(Base):
             int: The x-coordinate of the rectangle's position.
         """
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """
@@ -99,7 +100,7 @@ class Rectangle(Base):
             int: The y-coordinate of the rectangle's position.
         """
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """
