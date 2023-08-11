@@ -42,3 +42,10 @@ class Base:
         """ Write the JSON string to te file"""
         with open(filename,"w") as file:
             file.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return "[]"
+        else:
+            return json.dumps(json_string)
