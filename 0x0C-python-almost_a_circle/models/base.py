@@ -91,5 +91,6 @@ class Base:
                 list_dicts = cls.from_json_string(json_data)
                 intances = [cls.create(**data) for data in list_dicts]
                 return intances
-        except FileNotFoundError:  # If there's no such file then just return empty list
+        # If there's no such file then just return empty list
+        except FileNotFoundError:  
             return []
