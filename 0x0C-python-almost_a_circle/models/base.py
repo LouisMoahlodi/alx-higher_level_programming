@@ -92,5 +92,5 @@ class Base:
                 intances = [cls.create(**data) for data in list_dicts]
                 return intances
         # If there's no such file then just return empty list
-        except FileNotFoundError:  
+        except FileNotFoundError:
             return []
