@@ -45,8 +45,35 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Converts a JSON string representation to a list of dictionaries.
+
+        Args:
+            json_string (str): JSON string representation.
+
+        Returns:
+            list: List of dictionaries extracted from the JSON string.
+        """
         if json_string is None:
             json_string = []
             return json_string
         else:
             return json.loads(json_string)
+        
+    @classmethod
+    def create(cls, **dictionary):
+        """Creates an instance with attributes set from a dictionary.
+
+        Args:
+            **dictionary: Keyword arguments representing instance attributes.
+
+        Returns:
+            Base: An instance with attributes set from the dictionary.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy_instance = cls(1)
+        
+        dummy_instance.update(**dictionary)
+        return dummy_instance
+
