@@ -58,7 +58,7 @@ class Base:
             return json_string
         else:
             return json.loads(json_string)
-        
+
     @classmethod
     def create(cls, **dictionary):
         """Creates an instance with attributes set from a dictionary.
@@ -73,7 +73,6 @@ class Base:
             dummy_instance = cls(1, 1)
         elif cls.__name__ == "Square":
             dummy_instance = cls(1)
-        
+
         dummy_instance.update(**dictionary)
         return dummy_instance
-
