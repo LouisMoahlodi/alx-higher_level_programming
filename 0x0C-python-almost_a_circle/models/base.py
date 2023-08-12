@@ -76,8 +76,10 @@ class Base:
             dummy_instance = cls(1)
 
         if dummy_instance is not None:
-            if 'id' in dictionary:
-                dummy_instance.update(**dictionary)
+            #if 'id' in dictionary:
+            print("Before update:", dummy_instance.__dict__)
+            dummy_instance.update(**dictionary)
+            print("After update:", dummy_instance.__dict__)
             return dummy_instance
         return None
 
