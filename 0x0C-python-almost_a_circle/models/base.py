@@ -77,7 +77,9 @@ class Base:
 
         if dummy_instance is not None:
             dummy_instance.update(**dictionary)
-        return dummy_instance
+            if hasattr(dummy_instance, 'id'):
+                return dummy_instance
+        return None
 
     @classmethod
     def load_from_file(cls):
