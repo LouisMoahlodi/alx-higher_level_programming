@@ -69,6 +69,7 @@ class Base:
         Returns:
             Base: An instance with attributes set from the dictionary.
         """
+        dummy_instance = None
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(1, 1)
         elif cls.__name__ == "Square":
