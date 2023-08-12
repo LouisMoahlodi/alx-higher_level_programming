@@ -75,7 +75,8 @@ class Base:
         elif cls.__name__ == "Square":
             dummy_instance = cls(1)
 
-        dummy_instance.update(**dictionary)
+        if dummy_instance is not None:
+            dummy_instance.update(**dictionary)
         return dummy_instance
 
     @classmethod
