@@ -76,8 +76,8 @@ class Base:
             dummy_instance = cls(1)
 
         if dummy_instance is not None:
-            dummy_instance.update(**dictionary)
             if hasattr(dummy_instance, 'id'):
+                dummy_instance.update(**dictionary)
                 return dummy_instance
         return None
 
