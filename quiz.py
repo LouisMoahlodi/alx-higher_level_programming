@@ -1,2 +1,4 @@
-for i in range(2, 4):
-    print(i, end=" ")
+a = [1, 2, 3, 4]
+b = a
+a[2] = 10
+print (b)
