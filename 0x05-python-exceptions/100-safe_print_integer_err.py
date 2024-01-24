@@ -10,9 +10,8 @@ def safe_print_integer_err(value):
         sys.stderr.write("Exception: {}\n".format(e))
 
         # Return False to show failure
-        return False
+        return (False)
     
     else:
         # Return True indicating successful printing
-        return True
-    
+        return (True)
