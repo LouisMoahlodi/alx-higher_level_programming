@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-import sys
-import stderr
-
 
 def safe_print_integer_err(value):
+    import sys
     try:
         # Try to convert the value to an integer
         int_value = int(value)
