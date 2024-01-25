@@ -11,7 +11,7 @@ def safe_print_integer_err(value):
 
         # Return False to show failure
         return (False)
-    
+
     else:
         # Return True indicating successful printing
         return (True)
