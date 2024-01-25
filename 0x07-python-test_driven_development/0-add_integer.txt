@@ -1,2 +1,51 @@
-import doctest
-doctest.testfile(
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+# Test Case 1: Integer addition
+>>> add_integer(2, 3)
+5
+
+# Test Case 2: Float addition
+>>> add_integer(2.5, 3.5)
+5
+
+# Test Case 3: Integer and float addition
+>>> add_integer(2, 3.5)
+5
+
+# Test Case 4: Default argument usage
+>>> add_integer(2)
+100
+
+# Test Case 5: Negative numbers addition
+>>> add_integer(-5, 10)
+5
+
+# Test Case 6: Zero addition
+>>> add_integer(0, 0)
+0
+
+# Test Case 7: Large numbers addition
+>>> add_integer(999999999999999, 1)
+1000000000000000
+
+# Test Case 8: Type error for first argument
+>>> add_integer('a', 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# Test Case 9: Type error for second argument
+>>> add_integer(5, 'b')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+# Test Case 10: Type error for both arguments
+>>> add_integer('a', 'b')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
