@@ -4,6 +4,9 @@ The ``0-add_integer`` module
 Using ``add_integer``
 ----------------------
 
+Importing function from the module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
 # Test Case 1: Integer addition
 >>> add_integer(2, 3)
 5
