@@ -25,13 +25,13 @@ def say_my_name(first_name, last_name=""):
         None
     """
     # Check if first_name is a string
-    if type(first_name) != str:
+    if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
-    
+
     # Check if last_name is a string
-    if type(last_name) != str:
+    if not isinstance(last_name, str):
         raise TypeError("last_name must be string")
-    
-    else: 
+
+    else:
         # Print the full name
-        print("My name is", first_name +' '+ last_name)
+        print("My name is", first_name + ' ' + last_name)
