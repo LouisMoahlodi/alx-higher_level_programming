@@ -39,10 +39,6 @@ def print_square(size):
     if isinstance(size, float) or size < 0:
         raise TypeError("size must be an integer")
 
-    # If size is 0, return None (no square to print)
-    if size == 0:
-        return None
-
     else:
         # Print Square
         for i in range(size):
