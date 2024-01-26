@@ -21,7 +21,7 @@ Importing function from module:
 
 # Test Case 3: Printing square with size equal to 0
 >>> print_square(0)
-# (No output)
+#
 
 # Test Case 4: Printing square with negative size
 >>> print_square(-5)
