@@ -5,6 +5,7 @@ This module Prints a square made of '#' characters with the given size
 
 """
 
+
 def print_square(size):
     """
     Prints a square made of '#' characters with the given size.
@@ -28,7 +29,7 @@ def print_square(size):
         #####
     """
     # Check if size is an integer
-    if type(size) != int:
+    if not isinstance(size, int):
         raise TypeError("size must be an integer")
 
     # Check if size is non-negative
@@ -38,12 +39,8 @@ def print_square(size):
     # Check if size is a non-negative integer
     if isinstance(size, float) or size < 0:
         raise TypeError("size must be an integer")
-    
+
     else:
-        # Check if size is a 0
-        if size == 0:
-            print("#")
-        else:
         # Print Square
-            for i in range(size):
-                print('#' * size)
+        for i in range(size):
+            print('#' * size)
