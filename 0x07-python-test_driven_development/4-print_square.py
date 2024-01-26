@@ -38,8 +38,12 @@ def print_square(size):
     # Check if size is a non-negative integer
     if isinstance(size, float) or size < 0:
         raise TypeError("size must be an integer")
-
+    
     else:
+        # Check if size is a 0
+        if size == 0:
+            print("#")
+        else:
         # Print Square
-        for i in range(size):
-            print('#' * size)
+            for i in range(size):
+                print('#' * size)
