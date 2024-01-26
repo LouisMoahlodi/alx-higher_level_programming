@@ -2,7 +2,8 @@
 
 """
 
-This module provides a function say_my_name that prints the full name composed of the given first and last names.
+This module provides a function say_my_name that prints the full name 
+composed of the given first and last names.
 
 """
 
@@ -12,11 +13,13 @@ def say_my_name(first_name, last_name=""):
     Prints the full name composed of the given first and last names.
 
     Args:
-        first_name (str): The first name to be printed.
-        last_name (str, optional): The last name to be printed. Defaults to an empty string.
+        first_name (str): The first name to be printed
+        last_name (str, optional): The last name to be printed
 
     Raises:
-        TypeError: If first_name is not a string or if last_name is not a string.
+        TypeError: If first_name is not a string or 
+        
+        TypeError: If last_name is not a string
 
     Returns:
         None
