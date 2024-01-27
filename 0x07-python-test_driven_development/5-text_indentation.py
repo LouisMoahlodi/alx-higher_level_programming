@@ -46,7 +46,10 @@ def text_indentation(text):
 
             # If the character is a punctuation mark, print two new lines
             if char in punctuation_marks:
-                print("\n\n", end="")
+                # Check if the previous character was also a punctuation mark
+                if previous_punctuation:
+                    print("\n", end="")
+                print("\n", end="")
                 previous_punctuation = True
             else:
                 previous_punctuation = False
