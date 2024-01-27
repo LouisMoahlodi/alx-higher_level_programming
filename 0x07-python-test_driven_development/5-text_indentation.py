@@ -36,6 +36,9 @@ def text_indentation(text):
 
     # Iterate through each line of the text
     for line in lines:
+        # Flag to check if the previous character was a punctuation mark
+        previous_punctuation = False
+
         # Iterate through each character in the line
         for char in line:
             # Print the character without new line
@@ -44,6 +47,12 @@ def text_indentation(text):
             # If the character is a punctuation mark, print two new lines
             if char in punctuation_marks:
                 print("\n\n", end="")
+                previous_punctuation = True
+            else:
+                previous_punctuation = False
         
-        # Print a new line after processing each line of the text
-        print()
+        # If the previous character was a punctuation mark, print a new line
+        if previous_punctuation:
+            print()
+        else:
+            print()
