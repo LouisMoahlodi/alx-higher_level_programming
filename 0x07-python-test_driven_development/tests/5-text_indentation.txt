@@ -1,0 +1,67 @@
+The ``5-text_indentation`` module
+============================
+
+Using ``text_indentation``
+----------------------
+
+Importing function from module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test Case 1: Text with a period (.)
+>>> text_indentation("This is a sentence with a period.")
+This is a sentence with a period.
+
+
+# Test Case 2: Text with a question mark (?)
+>>> text_indentation("Is this a question?")
+Is this a question?
+
+
+# Test Case 3: Text with a colon (:)
+>>> text_indentation("This text has a colon:")
+This text has a colon:
+
+
+# Test Case 4: Text with multiple sentences and punctuation marks
+>>> text_indentation("Sentence one. Sentence two? Sentence three: Sentence four.")
+Sentence one.
+Sentence two?
+Sentence three:
+Sentence four.
+
+
+# Test Case 5: Empty text
+>>> text_indentation("")
+(No output)
+
+
+# Test Case 6: Text with only one character (.)
+>>> text_indentation(".")
+.
+
+
+# Test Case 7: Text with a single line and multiple punctuation marks
+>>> text_indentation("One sentence. Another sentence? Third sentence: Fourth sentence.")
+One sentence.
+Another sentence?
+Third sentence:
+Fourth sentence.
+
+
+# Test Case 8: Passing an integer instead of text
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+# Test Case 9: Text with new line characters (\n)
+>>> text_indentation("Sentence one.\nSentence two?")
+Sentence one.
+Sentence two?
+
+
+# Test Case 10: Text with no punctuation marks
+>>> text_indentation("This is a test with no punctuation marks")
+This is a test with no punctuation marks
+```
