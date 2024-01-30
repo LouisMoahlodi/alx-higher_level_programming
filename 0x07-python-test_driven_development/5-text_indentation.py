@@ -1,36 +1,44 @@
 #!/usr/bin/python3
 """
-
-Module composed by a function that prints 2 new lines after ".?:" characters
-
+This module prints text with two new lines after each occurrence 
+of ".", "?", and ":" characters.
 """
 
-
 def text_indentation(text):
-    """ Function that prints 2 new lines after ".?:" characters
+    """
+    Prints text with two new lines after each occurrence of ".", "?", and ":" characters.
 
     Args:
-        text: input string
+        text (str): The text to be printed.
 
     Returns:
-        No return
+        None
 
     Raises:
-        TypeError: If text is not a string
+        TypeError: If text is not a string.
 
+    Example:
+        >>> text_indentation("Hello. How are you?")
+        Hello.
+        How are you?
 
     """
-
-    if type(text) is not str:
+    # Check if text is a string
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
+    
+    # Define punctuation marks to look for
+    punctuation_marks = ['.', '?', ':']
 
-    s = text[:]
+    # Iterate through each character in the text
+    for char in text:
+        # Print the character without new line
+        print(char, end='')
 
-    for d in ".?:":
-        list_text = s.split(d)
-        s = ""
-        for i in list_text:
-            i = i.strip(" ")
-            s = i + d if s == "" else s + "\n\n" + i + d
-
-    print(s[:-3], end="")
+        # If the character is a punctuation mark, print two new lines
+        if char in punctuation_marks:
+            print("\n\n", end="")
+        
+    # Print a new line if the last character is not a punctuation mark
+    if text[-1] not in punctuation_marks:
+        print()
