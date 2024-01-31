@@ -1,0 +1,54 @@
+The ``100-matrix_mu`` module
+============================
+
+Using ``matrix_mul``
+---------------------
+
+Importing function from the module
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+# Test Case 1: Multiplying two 2x2 matrices with positive integers
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 0], [0, 1]])
+[[1, 2], [3, 4]]
+
+# Test Case 2: Multiplying a 2x2 matrix with a 2x3 matrix with positive integers
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]])
+[[9, 12, 15], [19, 26, 33]]
+
+# Test Case 3: Multiplying a 3x2 matrix with a 2x2 matrix with positive integers
+>>> matrix_mul([[1, 2], [3, 4], [5, 6]], [[1, 0], [0, 1]])
+[[1, 2], [3, 4], [5, 6]]
+
+# Test Case 4: Multiplying a 1x1 matrix with a 1x1 matrix with positive integers
+>>> matrix_mul([[2]], [[3]])
+[[6]]
+
+# Test Case 5: Multiplying a 2x2 matrix with a 2x2 matrix with negative integers
+>>> matrix_mul([[-1, -2], [-3, -4]], [[-1, -2], [-3, -4]])
+[[7, 10], [15, 22]]
+
+# Test Case 6: Multiplying a 2x3 matrix with a 3x2 matrix with negative integers
+>>> matrix_mul([[-1, -2, -3], [-4, -5, -6]], [[-1, -2], [-3, -4], [-5, -6]])
+[[22, 28], [49, 64]]
+
+# Test Case 7: Multiplying an empty matrix with a 1x1 matrix
+>>> matrix_mul([], [[1]])
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+# Test Case 8: Multiplying a 2x2 matrix with an empty matrix
+>>> matrix_mul([[1, 2], [3, 4]], [])
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+# Test Case 9: Multiplying a 2x2 matrix with a 3x3 matrix with different dimensions
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+Traceback (most recent call last):
+...
+ValueError: m_a and m_b can't be multiplied
+
+# Test Case 10: Multiplying matrices with non-integer elements
+>>> matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[1, 2], [3, 4]])
+[[10.0, 15.0], [18.0, 27.0]]
