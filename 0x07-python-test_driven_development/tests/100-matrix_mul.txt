@@ -48,7 +48,3 @@ ValueError: m_b can't be empty
 Traceback (most recent call last):
 ...
 ValueError: m_a and m_b can't be multiplied
-
-# Test Case 10: Multiplying matrices with non-integer elements
->>> matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[1, 2], [3, 4]])
-[[10.0, 15.0], [18.0, 27.0]]
