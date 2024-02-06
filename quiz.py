@@ -1,5 +1,12 @@
-a = 1
-b = 1
+class Base():
+    """ My base class """
 
-if a is b:
-    print("a and b are the same object")
+    __nb_instances = 0
+
+    def __init__(self):
+        Base.__nb_instances += 1
+        self.id = Base.__nb_instances
+
+for i in range(3):
+    b = Base()
+print(b.id)
