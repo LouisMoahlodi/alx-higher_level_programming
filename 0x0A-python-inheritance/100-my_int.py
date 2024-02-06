@@ -1,6 +1,7 @@
 #!/usr/bib/python3
 class MyInt(int):
-    """A class representing an integer with inverted equality and inequality operators.
+    """A class representing an integer with inverted equality 
+    and inequality operators.
 
     Inherits from the built-in int class.
 
