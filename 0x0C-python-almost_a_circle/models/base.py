@@ -3,7 +3,7 @@
 
 import json
 import csv
-
+import turtle
 
 class Base:
     """ A base class for all other classes"""
@@ -133,3 +133,50 @@ class Base:
             return instances
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        # Initialize the turtle screen 
+        screen = turtle.Screen()
+        screen.setup(width=800, height=600)
+        screen.title("Drawing Rectangles and Sqaures")
+
+        # Create a turtle object for drawing
+        t = turtle.Turtle()
+
+        # Define a function to draw rectangle
+        def draw_rectangle(rectangle):
+            t.penup()
+            t.goto(rectangle.x - rectangle.y)
+            t.pendown()
+            t.color("red")
+            t.begin_fill
+            for _ in range(2):
+                t.forward(rectangle.width)
+                t.left(90)
+                t.forward(rectangle.height)
+                t.left(90)
+            t.end_fill()
+
+        # Define a function to draw a sqaure
+        def draw_square(sqare):
+            t.penup()
+            t.goto(square.c, square.y)
+            t.pendown()
+            t.color("purple")
+            t.begin_fill()
+            for _ in range(4):
+                t.forward(sqaure.size)
+                t.left(90)
+            t.end_fill()
+
+        # Draw all rectangles
+        for rectangle in list_rectangles:
+            draw_rectangle(rectangle)
+
+        # Draw all squares
+        for square in list_squares:
+            draw_square(square)
+
+        # Close the turtle graphics window when clicked
+        screen.exitonclick()
