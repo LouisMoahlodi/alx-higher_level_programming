@@ -2,6 +2,7 @@
 """ Base class created """
 
 import json
+import csv 
 
 
 class Base:
@@ -98,5 +99,34 @@ class Base:
                 intances = [cls.create(**data) for data in list_dicts]
                 return intances
         # If there's no such file then just return empty list
+        except FileNotFoundError:
+            return []
+        
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Saves a list of objects to a CSV file."""
+        filename = f"{cls.__name__}.csv"
+        with open(filename, 'w', newline= '') as csvfile:
+            writer = csv.writer(csvfile)
+            for obj in list_objs:
+                if cls .__name__ == 'Rectangle':
+                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                elif cls.__name__ == 'Square':
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = f"{cls.__name__}.csv"
+        instances = []
+        try:
+            with open(filename, "r", newline='') as csvfile:
+                reader = csv.reader(csvfile)
+                for row in reader:
+                    if cls.__name__ == 'Rectangle':
+                        instance = cls(int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[0]))
+                    elif  cls.__name__ == 'Square':
+                        instance = cls(int(row[1]), int(row[2]), int(row[3]), int(row[0]))
+                    instances.append(instance)
+            return  instances
         except FileNotFoundError:
             return []
