@@ -7,6 +7,12 @@ class Base():
         Base.__nb_instances += 1
         self.id = Base.__nb_instances
 
-for i in range(3):
-    b = Base()
-print(b.id)
+class User(Base):
+    """ My user class"""
+
+    def  __init__(self):
+        super().__init__()
+        self.id += 99
+
+u = User()
+print(u.id)
