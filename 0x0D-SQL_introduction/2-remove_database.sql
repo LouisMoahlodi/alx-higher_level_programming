@@ -1,2 +1,2 @@
 -- This SQL command deletes a database in MySQL server
-DELETE DATABASE IF EXISTS hbtn_0c_0;
+DROP DATABASE IF EXISTS hbtn_0c_0;
