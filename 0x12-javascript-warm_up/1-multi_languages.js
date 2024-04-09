@@ -1,3 +1,4 @@
+#!/usr/bin/node
 let message = 'C is fun' +
 '\n Python is cool' + 
 '\n JavaScript is amazing';
