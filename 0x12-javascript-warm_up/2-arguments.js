@@ -1,0 +1,10 @@
+const arguments = process.argv.slice(2);
+
+// Check the number of arguments
+if (arguments.length === 0){
+    console.log('No agrument');
+} else if (arguments.length === 1){
+    console.log('Argument found');
+} else {
+    console.log('Arguments found')
+}
