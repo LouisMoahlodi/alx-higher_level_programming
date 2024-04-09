@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const arguments = process.argv.slice(2);
 
 // Check the number of arguments
