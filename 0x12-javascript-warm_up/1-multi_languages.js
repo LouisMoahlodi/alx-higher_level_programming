@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let message = 'C is fun' +
-'\n Python is cool' + 
-'\n JavaScript is amazing';
-console.log(message)
+const messages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+for (let message of messages) {
+  console.log(message);
+}
