@@ -1,6 +1,7 @@
 import MySQLdb
 import sys
 
+
 def list_states_starting_with_n(username, password, database_name):
     """
     Connects to the MySQL database and lists all states with names starting with 'N' from the 'states' table.
@@ -15,11 +16,17 @@ def list_states_starting_with_n(username, password, database_name):
     """
     try:
         # Connect to MySQL server
-        db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database_name)
+        db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database_name)
         cursor = db.cursor()
 
         # Execute SQL query
-        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+        cursor.execute(
+            "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
         # Fetch all rows
         rows = cursor.fetchall()
@@ -28,12 +35,13 @@ def list_states_starting_with_n(username, password, database_name):
         for row in rows:
             print(row)
 
-        # Close cursor and connection 
+        # Close cursor and connection
         cursor.close()
         db.close()
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
