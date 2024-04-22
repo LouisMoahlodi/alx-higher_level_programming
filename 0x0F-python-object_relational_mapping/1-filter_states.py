@@ -1,4 +1,20 @@
 #!/usr/bin/python3
+
+"""
+Script to list all states with names starting with 'N' from the MySQL database.
+
+Usage:
+    python script.py <username> <password> <database_name>
+
+Arguments:
+    <username>: MySQL username with access to the database.
+    <password>: Password for the MySQL user.
+    <database_name>: Name of the MySQL database containing the 'states' table.
+
+Dependencies:
+    - MySQLdb: Python interface for MySQL.
+"""
+
 import MySQLdb
 import sys
 
