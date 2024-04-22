@@ -18,6 +18,7 @@ Dependencies:
 import MySQLdb
 import sys
 
+
 def list_states(username, password, database_name):
     """
     Connects to the MySQL database and lists all states from the 'states' table.
@@ -32,7 +33,12 @@ def list_states(username, password, database_name):
     """
     try:
         # Connect to MySQL server
-        db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database_name)
+        db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database_name)
         cursor = db.cursor()
 
         # Execute SQL query
@@ -45,21 +51,22 @@ def list_states(username, password, database_name):
         for row in rows:
             print(row)
 
-        # Close cursor and connection 
+        # Close cursor and connection
         cursor.close()
         db.close()
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
         sys.exit(1)
 
-if  __name__ == "__main__":
+
+if __name__ == "__main__":
     # Check if all 3 arguments are provided
     if len(sys.argv) != 4:
         print("Usage: python script.py <username> <password> <database_name>")
         sys.exit(1)
 
     # Extract username, password, and database name from command-line arguments
-    username, password,  database_name = sys.argv[1:]
+    username, password, database_name = sys.argv[1:]
 
     # Call the function to list states
     list_states(username, password, database_name)
