@@ -21,7 +21,7 @@ import sys
 
 def list_states(username, password, database_name):
     """
-    Connects to the MySQL database and lists all states from the 'states' table.
+    Connects to the MySQL database and lists all states from the states table.
 
     Parameters:
         username (str): MySQL username.
