@@ -21,7 +21,7 @@ import sys
 
 def list_states_starting_with_n(username, password, database_name):
     """
-    Connects to the MySQL database and lists all states 
+    Connects to the MySQL database and lists all states
     with names starting with 'N' from the 'states' table.
 
     Parameters:
@@ -44,7 +44,8 @@ def list_states_starting_with_n(username, password, database_name):
 
         # Execute SQL query
         cursor.execute(
-            "SELECT * FROM states WHERE name LIKE 'N%' OR name LIKE 'n%' ORDER BY id ASC")
+            "SELECT * FROM states WHERE name LIKE 'N%' OR" 
+            "name LIKE 'n%' ORDER BY id ASC")
 
         # Fetch all rows
         rows = cursor.fetchall()
